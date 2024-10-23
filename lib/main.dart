@@ -2,10 +2,6 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:giuaky_maiphuong/screens/add_product_page.dart';
 import 'package:giuaky_maiphuong/screens/home_screen.dart';
-import 'package:giuaky_maiphuong/screens/login_screen.dart';
-// import 'package:giuaky_maiphuong/screens/login_screen.dart';
-// import 'package:giuaky_maiphuong/screens/product_page.dart';
-// import 'package:giuaky_maiphuong/screens/register_screen.dart';
 
 
 void main(dynamic FirebaseAppCheck) async{
@@ -29,14 +25,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => HomeScreen(),
-        // '/home': (context) => HomeScreen(),
-        // '/': (context) => HomeScreen(),
-        // '/productPage': (context) => ProductPage(),
-        // '/products': (context) => ProductPage(),
         '/addProduct': (context) => AddProductPage(),
-        // '/': (context) => LoginScreen(),
-        // '/home': (context) => HomeScreen(),
-        // '/productPage': (context) => ProductPage()
       },
     );
   }

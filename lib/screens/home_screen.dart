@@ -28,18 +28,23 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Trang Chủ Admin'),
+        title: Text(
+          'Trang Chủ Admin',
+          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold), // Thêm kiểu chữ cho tiêu đề
+        ),
+        backgroundColor: Colors.green, // Thêm màu nền cho AppBar
         bottom: TabBar(
           controller: _tabController,
+          indicatorColor: Colors.white, // Thêm màu cho chỉ báo TabBar
           tabs: [
-            Tab(icon: Icon(Icons.account_circle), text: 'Quản Lý Admin'),
-            Tab(icon: Icon(Icons.shopping_cart), text: 'Quản Lý Sản Phẩm'),
-            Tab(icon: Icon(Icons.category), text: 'Quản Lý Danh Mục'),
+            Tab(icon: Icon(Icons.account_circle, color: Colors.white), text: 'Quản Lý Admin'),
+            Tab(icon: Icon(Icons.shopping_cart, color: Colors.white), text: 'Quản Lý Sản Phẩm'),
+            Tab(icon: Icon(Icons.category, color: Colors.white), text: 'Quản Lý Danh Mục'),
           ],
         ),
         actions: [
           IconButton(
-            icon: Icon(Icons.logout),
+            icon: Icon(Icons.logout, color: Colors.white),
             onPressed: () {
               // Đăng xuất và điều hướng về màn hình đăng nhập
               Navigator.pushReplacement(
@@ -54,7 +59,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
         controller: _tabController,
         children: [
           AdminInfo(),
-          ProductPage(),
+          ProductPage(), // Truyền tham số mặc định cho category
           CategoryPage(),
         ],
       ),
